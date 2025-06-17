@@ -25,8 +25,22 @@ func lesson2(slice2 []string) {
 	}
 }
 
+func lesson3(slice3 []int64) []int64 {
+	sliceResult := make([]int64, 0)
+	for _, value := range slice3 {
+		if value%2 != 0 {
+			sliceResult = append(sliceResult, value)
+		}
+
+	}
+	return sliceResult
+}
+
 func main() {
-	arrow1 := []string{"asss", "as", "asssss", "sasssss", "aaasss", "as"}
+	arrow1 := []string{"asss", "as", "asssss", "sasssss", "aaasss", "as"} //исходный массив строк для первых двух задач
 	resultOfLesson1 := lesson1(arrow1)
 	lesson2(resultOfLesson1)
+	arrowForLesson3 := []int64{12, 33, 11, 444, 12, 44, 42, 12, 13, 35, 25, 22}
+	fmt.Println("Результат удаления четных чисел из исхоного среза:", lesson3(arrowForLesson3))
+
 }
